@@ -1,0 +1,7 @@
+{
+  "name": "knitfitApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

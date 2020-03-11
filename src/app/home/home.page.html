@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+  
+  <ion-title color="favorite">Log in</ion-title>
+</ion-toolbar>
+</ion-header> 
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <img src="http://knitfitco.com/knitfitnew/resources/assets/files/assets/images/logoNew.png" class="theme-logo" alt="logo.png"> 
+<form class="form-material"  #form="ngForm" (ngSubmit)="logForm(form)">
+    <ion-card>
+        <!-- <ion-card-header>
+          <ion-card-title>Log in</ion-card-title>
+        </ion-card-header> -->
+        <ion-card-content>
+        <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">Username/Email</ion-label>
+          <ion-input type="text" name="email" ngModel></ion-input>
+        </ion-item>
+      <ion-item class="form-group form-primary">
+        <ion-label position="floating" style="color: #898989;">Password</ion-label>
+        <!-- <ion-icon class="ion-float-right" name="eye-outline"></ion-icon> -->
+        <ion-input type="password" name="password" ngModel></ion-input>
+        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+      </ion-item>
+
+<ion-item class="form-group form-primary">
+       <button class="submit" type="button" (click)="facebookLogin()" ion-button margin-right  >
+          Facebook Login
+        </button>
+      
+</ion-item>
+
+<ion-item class="form-group form-primary">
+       <button class="submit" type="button" (click)="googleLogin()" ion-button margin-right  >
+          Google+
+        </button>
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      
+</ion-item>
+
+        <ion-text>
+        <a routerLink="/forgot-password">Forgot Password?</a>
+        </ion-text>
+        </ion-card-content>
+  </ion-card>
+    <div text-center margin-top>
+        <button class="submit" type="submit" ion-button margin-right style="background-color: transparent;
+        border: 1px solid #0d665c;
+        color: #0d665c !important;width: 99%;height: 30px" >
+          SIGN UP
+        </button>
+    </div>
+     <ion-text class="ion-float-left" >
+        <a routerLink="/registration" class="color">Don't have an account? Register here</a>
+        </ion-text>
+    
+</form>
+  </div>
+</ion-content>

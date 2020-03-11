@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "560192696384",
+    "firebase_url": "https://angular-test-01-2b83c.firebaseio.com",
+    "project_id": "angular-test-01-2b83c",
+    "storage_bucket": "angular-test-01-2b83c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560192696384:android:8d736932bbb5b4d8742fa5",
+        "android_client_info": {
+          "package_name": "com.ionic.knitfitGoogleLogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560192696384-29q3svpho0hc9ivur8rrm7oqj1f6s1jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVWwu2hCo8qOvJIyYk-3EBZjtmEYUlM24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560192696384-29q3svpho0hc9ivur8rrm7oqj1f6s1jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

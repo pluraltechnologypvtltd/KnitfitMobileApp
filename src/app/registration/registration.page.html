@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		  <ion-buttons slot="start" routerLink="/home">
+    <ion-icon class="ion-float-right" name="close-outline" color="favorite"></ion-icon>
+  </ion-buttons>
+    <ion-title color="favorite">Create account</ion-title>
+    <ion-buttons slot="end" routerLink="/reset-password">
+    <ion-icon  class="ion-float-left" name="checkmark-outline" color="favorite"></ion-icon>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+<ion-content>
+<div class="container">
+	<img src="http://knitfitco.com/knitfitnew/resources/assets/files/assets/images/logoNew.png" class="theme-logo" alt="logo.png"> 
+  <form class="form-material" [formGroup]="registrationForm" (ngSubmit)="registrationForm.valid && submitRegistration(registrationForm.value)" novalidate >
+  	<ion-card>
+	<ion-card-content>
+		 <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">First Name</ion-label>
+          <ion-input type="text" formControlName="first_name" ></ion-input>
+          <div class='form-text error' *ngIf="registrationForm.controls.first_name.touched">
+          <div *ngIf="registrationForm.controls.first_name.hasError('required')">First Name is required.</div>
+        </div> 
+        </ion-item>
+
+        <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">Last Name</ion-label>
+          <ion-input type="text" formControlName="last_name" ></ion-input>
+          <div class='form-text error' *ngIf="registrationForm.controls.last_name.touched">
+          <div *ngIf="registrationForm.controls.last_name.hasError('required')">Last Name is required.</div>
+        </div> 
+        </ion-item>
+
+        <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">Choose Username</ion-label>
+          <ion-input type="text" formControlName="username"  required></ion-input>
+          <div class="form-text error" *ngIf="registrationForm.controls.username.touched">
+          <div *ngIf="registrationForm.controls.username.hasError('required')">Username is required.</div>
+        </div>
+        </ion-item>
+
+        <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">Your Email Address</ion-label>
+          <ion-input type="text" formControlName="email"  required></ion-input>
+          <div class="form-text error" *ngIf="registrationForm.controls.email.touched">
+          <div *ngIf="registrationForm.controls.email.hasError('required')">Email is required.</div>
+          <div *ngIf="registrationForm.controls.email.hasError('invalidEmail')">Email is invalid.</div>
+        </div>
+        </ion-item>
+
+         <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">Password</ion-label>
+          <ion-input type="password" formControlName="password"  minlength='6' required></ion-input>
+          <div class='form-text error' *ngIf="registrationForm.controls.password.touched">
+          <div *ngIf="registrationForm.controls.password.hasError('required')">Password is required.</div>
+          <div *ngIf="registrationForm.controls.password.hasError('minlength')">Password isn't long enough.</div>
+        </div>
+        </ion-item>
+
+         <ion-item class="form-group form-primary">
+          <ion-label position="floating" style="color: #898989;">Confirm Password</ion-label>
+          <ion-input type="password" formControlName="confirm_password"  required></ion-input>
+           <div class='form-text error' *ngIf="registrationForm.controls.confirm_password.touched">
+          <div *ngIf="registrationForm.hasError('mismatchedPasswords')">Passwords do not match.</div>
+        </div>
+        </ion-item>
+         <ion-item>
+              <!-- <ion-input name="terms_and_conditions" type="hidden" value="1"  ></ion-input> -->
+              <ion-checkbox checked="false" formControlName="terms_and_conditions"></ion-checkbox>
+               <div class="form-text error" *ngIf="registrationForm.controls.terms_and_conditions.touched">
+          <div *ngIf="registrationForm.controls.terms_and_conditions.hasError('required')">Accept the conditions.</div>
+        </div>
+            </ion-item>
+</ion-card-content>
+</ion-card>
+ <div text-center margin-top>
+        <button class="submit" type="submit" ion-button margin-right style="background-color: transparent;
+        border: 1px solid #0d665c;
+        color: #0d665c !important;width: 99%;height: 30px" >
+          Register
+        </button>
+    </div>
+     <ion-text class="ion-float-left" >
+        <a routerLink="/home" class="color">Back to Knitfit</a>
+        </ion-text>
+
+  </form>
+</div>
+
+</ion-content>
